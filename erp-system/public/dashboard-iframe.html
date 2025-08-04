@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Dashboard - Access Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .dashboard-title {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .access-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .access-card {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+        }
+        .access-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,123,255,0.4);
+            text-decoration: none;
+            color: white;
+        }
+        .access-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 22px;
+        }
+        .access-card p {
+            margin: 0;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        .features {
+            text-align: left;
+            margin-top: 40px;
+        }
+        .features h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        .feature-item .icon {
+            font-size: 24px;
+        }
+        .dashboard-preview {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px dashed #dee2e6;
+        }
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:history.back()" class="back-link">← Back to Admin</a>
+    
+    <div class="container">
+        <h1 class="dashboard-title">
+            📊 ERP Analytics Dashboard
+        </h1>
+        <p class="subtitle">Comprehensive business intelligence and analytics for your ERP system</p>
+        
+        <div class="access-options">
+            <a href="../../dashboard.html" target="_blank" class="access-card">
+                <h3>🚀 Full Dashboard Experience</h3>
+                <p>Access the complete interactive dashboard with all modules, KPI cards, and advanced analytics in a new window for the best experience.</p>
+            </a>
+            
+            <a href="#embedded" onclick="showEmbedded()" class="access-card">
+                <h3>📱 Quick View (Embedded)</h3>
+                <p>View the dashboard embedded within this page. Perfect for quick checks and mobile viewing.</p>
+            </a>
+        </div>
+        
+        <div class="features">
+            <h3>🎯 Dashboard Features</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="icon">💰</span>
+                    <span>Revenue & Expense Tracking</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">👥</span>
+                    <span>HR Analytics & Reports</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📊</span>
+                    <span>Financial Analysis</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🛒</span>
+                    <span>Sales Performance</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🏬</span>
+                    <span>Procurement Insights</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📦</span>
+                    <span>Inventory Management</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📅</span>
+                    <span>Date Range Filtering</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📱</span>
+                    <span>Mobile Responsive</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="embedded-dashboard" class="dashboard-preview" style="display: none;">
+            <h3>📊 Embedded Dashboard View</h3>
+            <iframe src="../../dashboard.html" width="100%" height="600" frameborder="0" style="border-radius: 8px;"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function showEmbedded() {
+            const embedded = document.getElementById('embedded-dashboard');
+            if (embedded.style.display === 'none') {
+                embedded.style.display = 'block';
+                embedded.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                embedded.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

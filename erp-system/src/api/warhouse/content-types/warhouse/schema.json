@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "warhouses",
+  "info": {
+    "singularName": "warhouse",
+    "pluralName": "warhouses",
+    "displayName": "Warhouse"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "stock_movements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::stock-movement.stock-movement",
+      "mappedBy": "warhouse"
+    }
+  }
+}

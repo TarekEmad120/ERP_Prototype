@@ -1,0 +1,12 @@
+{
+  "name": "erp-dashboard",
+  "displayName": "ERP Dashboard",
+  "description": "Comprehensive analytics dashboard for ERP system",
+  "version": "1.0.0",
+  "strapi": {
+    "name": "erp-dashboard",
+    "displayName": "ERP Dashboard",
+    "description": "Analytics and reporting dashboard",
+    "kind": "plugin"
+  }
+}

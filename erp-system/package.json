@@ -1,0 +1,54 @@
+{
+  "name": "erp-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "seed": "node scripts/seed.js",
+    "clear-db": "node scripts/clear-database.js",
+    "test-subtotal": "node scripts/test-subtotal.js",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "5.19.0",
+    "@strapi/plugin-documentation": "^5.19.0",
+    "@strapi/plugin-users-permissions": "5.19.0",
+    "@strapi/strapi": "5.19.0",
+    "better-sqlite3": "11.3.0",
+    "chart.js": "^4.5.0",
+    "date-fns": "^2.30.0",
+    "html-pdf-node": "^1.0.8",
+    "jspdf": "^3.0.1",
+    "jspdf-autotable": "^5.0.2",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^24.15.0",
+    "react": "^18.0.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.9.41",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "31cb3e92-3e84-4c27-bcc8-18934cdbf136",
+    "installId": "c9055ec5d56f3ad94e3a6382b59cc45c4a7f9bd6909fc7ef9edd6e340594c4ef"
+  }
+}

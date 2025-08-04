@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_order_items",
+  "info": {
+    "singularName": "sales-order-item",
+    "pluralName": "sales-order-items",
+    "displayName": "SalesOrderItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sales_order": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sales-order.sales-order",
+      "inversedBy": "sales_order_items"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "unit_price": {
+      "type": "decimal",
+      "required": true,
+      "unique": false
+    },
+    "subtotal": {
+      "type": "decimal"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "sales_order_items"
+    }
+  }
+}

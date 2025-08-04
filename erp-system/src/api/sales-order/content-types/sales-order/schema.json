@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_orders",
+  "info": {
+    "singularName": "sales-order",
+    "pluralName": "sales-orders",
+    "displayName": "SalesOrder"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order_number": {
+      "type": "uid",
+      "required": true
+    },
+    "order_status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "confirmed",
+        "shipped",
+        "completed"
+      ]
+    },
+    "order_date": {
+      "type": "datetime"
+    },
+    "total_number": {
+      "type": "decimal"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "sales_orders"
+    },
+    "sales_order_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sales-order-item.sales-order-item",
+      "mappedBy": "sales_order"
+    },
+    "invoices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::invoice.invoice",
+      "mappedBy": "sales_order"
+    }
+  }
+}

@@ -787,7 +787,7 @@ This project is licensed under the MIT License - see the [LICENSE](./erp-system/
 - **Strapi Team**: For the excellent headless CMS framework
 - **Chart.js Community**: For powerful data visualization tools
 - **React Community**: For the robust frontend ecosystem
-- **Contributors**: All developers who help improve this project
+- **Contributors**: All developers who help improve this project especially Eng. Omar Amir
 
 ---
 
